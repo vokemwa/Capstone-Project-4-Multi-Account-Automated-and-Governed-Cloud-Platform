@@ -1,0 +1,32 @@
+{
+  "version": "36.0.0",
+  "files": {
+    "2801f208ed681568625400652e5039e700afd7b63f2fd8b07a12cf67165d518a": {
+      "source": {
+        "path": "asset.2801f208ed681568625400652e5039e700afd7b63f2fd8b07a12cf67165d518a",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "2801f208ed681568625400652e5039e700afd7b63f2fd8b07a12cf67165d518a.zip",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    },
+    "066b9831b7d86332aca035fe1b55088771e8752d45c8c572b524152641ac51a2": {
+      "source": {
+        "path": "WorkflowStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "066b9831b7d86332aca035fe1b55088771e8752d45c8c572b524152641ac51a2.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
