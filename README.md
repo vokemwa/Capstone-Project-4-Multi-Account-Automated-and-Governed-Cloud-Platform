@@ -4,6 +4,19 @@
 * Before the CI/CD pipelines, we need to test and verify whether lambda and SSM actually work in CLI terminal
 
 * We need to bootstrap the aws environment by running this code in the terminal 
-`cdk bootstrap aws://541426239397/us-east-1`. This command creates the s3 bucket to hold the assets
+`cdk bootstrap aws://541426239397/us-east-1`. This command creates the s3 bucket to hold the assets and Creates the IAM roles that CDK needs to perform the deployment.
 
 ![alt text](image.png)
+
+## Deploy
+
+Use `cdk deploy` to run the files
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
+![alt text](image-3.png)
+
+
+
