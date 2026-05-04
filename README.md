@@ -52,3 +52,8 @@ Store it in `AWS Secrets Manager` as a plaintext secret named `github-token`.
 Below is my token generation screen
 
 ![alt text](image-7.png)
+
+Save the token key in AWS secret manager
+
+![alt text](image-8.png)
+
