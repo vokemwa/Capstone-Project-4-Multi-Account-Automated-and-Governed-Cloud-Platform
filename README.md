@@ -36,3 +36,19 @@ Go to the AWS Step Functions Console. Click on MyStateMachine -> Start Execution
 Click the log link to cloudwatch
 
 ![alt text](image-6.png)
+
+## CI/CD Automation
+
+We need a Pipeline Stack. This stack will monitor the GitHub repository and automatically run `cdk deploy` whenever you push code.
+
+Before setting up the pipeline, we need to access github from AWS
+
+Go to GitHub -> Settings -> Developer Settings -> Personal access tokens
+
+Generate a token with repo and `admin:repo_hook` permissions.
+
+Store it in `AWS Secrets Manager` as a plaintext secret named `github-token`.
+
+Below is my token generation screen
+
+![alt text](image-7.png)
