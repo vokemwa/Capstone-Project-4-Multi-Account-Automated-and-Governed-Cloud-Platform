@@ -25,3 +25,9 @@ Use `cdk deploy` to run the files
 * go to IAM console and Find the execution role created for the Lambda function
 
 ![alt text](image-4.png)
+
+## Verify the workflow
+
+Go to the AWS Step Functions Console. Click on MyStateMachine -> Start Execution. Wait for it to turn green.
+
+![alt text](image-5.png)
