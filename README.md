@@ -31,3 +31,8 @@ Use `cdk deploy` to run the files
 Go to the AWS Step Functions Console. Click on MyStateMachine -> Start Execution. Wait for it to turn green.
 
 ![alt text](image-5.png)
+
+## Check the logs
+Click the log link to cloudwatch
+
+![alt text](image-6.png)
