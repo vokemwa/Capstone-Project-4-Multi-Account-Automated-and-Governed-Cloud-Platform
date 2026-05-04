@@ -20,3 +20,8 @@ Use `cdk deploy` to run the files
 
 
 
+## The principle of least priviledge
+
+* go to IAM console and Find the execution role created for the Lambda function
+
+![alt text](image-4.png)
