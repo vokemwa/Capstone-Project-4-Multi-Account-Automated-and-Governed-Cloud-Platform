@@ -1,113 +1,168 @@
 {
   "version": "36.0.0",
   "artifacts": {
-    "WorkflowStack.assets": {
+    "assembly-PipelineStack-Deploy": {
+      "type": "cdk:cloud-assembly",
+      "properties": {
+        "directoryName": "assembly-PipelineStack-Deploy",
+        "displayName": "PipelineStack/Deploy"
+      }
+    },
+    "PipelineStack.assets": {
       "type": "cdk:asset-manifest",
       "properties": {
-        "file": "WorkflowStack.assets.json",
+        "file": "PipelineStack.assets.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
       }
     },
-    "WorkflowStack": {
+    "PipelineStack": {
       "type": "aws:cloudformation:stack",
-      "environment": "aws://unknown-account/unknown-region",
+      "environment": "aws://541426239397/us-east-1",
       "properties": {
-        "templateFile": "WorkflowStack.template.json",
+        "templateFile": "PipelineStack.template.json",
         "terminationProtection": false,
         "validateOnSynth": false,
-        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
-        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/066b9831b7d86332aca035fe1b55088771e8752d45c8c572b524152641ac51a2.json",
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::541426239397:role/cdk-hnb659fds-deploy-role-541426239397-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::541426239397:role/cdk-hnb659fds-cfn-exec-role-541426239397-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-541426239397-us-east-1/0f4f9c80a8fe4f764810291dbc1bbb6d76f966716f9d772b6281a6ef779a1294.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
-          "WorkflowStack.assets"
+          "PipelineStack.assets"
         ],
         "lookupRole": {
-          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "arn": "arn:${AWS::Partition}:iam::541426239397:role/cdk-hnb659fds-lookup-role-541426239397-us-east-1",
           "requiresBootstrapStackVersion": 8,
           "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
         }
       },
       "dependencies": [
-        "WorkflowStack.assets"
+        "PipelineStack.assets"
       ],
       "metadata": {
-        "/WorkflowStack/AppGreeting/Resource": [
+        "/PipelineStack/Pipeline/Pipeline/ArtifactsBucket/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AppGreeting4455FE37"
+            "data": "PipelineArtifactsBucketAEA9A052"
           }
         ],
-        "/WorkflowStack/WorkflowTask/ServiceRole/Resource": [
+        "/PipelineStack/Pipeline/Pipeline/ArtifactsBucket/Policy/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "WorkflowTaskServiceRoleCB3879DC"
+            "data": "PipelineArtifactsBucketPolicyF53CCC52"
           }
         ],
-        "/WorkflowStack/WorkflowTask/ServiceRole/DefaultPolicy/Resource": [
+        "/PipelineStack/Pipeline/Pipeline/Role/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "WorkflowTaskServiceRoleDefaultPolicy849A8BA1"
+            "data": "PipelineRoleB27FAA37"
           }
         ],
-        "/WorkflowStack/WorkflowTask/Resource": [
+        "/PipelineStack/Pipeline/Pipeline/Role/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "WorkflowTask865FF66C"
+            "data": "PipelineRoleDefaultPolicy7BDC1ABB"
           }
         ],
-        "/WorkflowStack/MyStateMachine/Role/Resource": [
+        "/PipelineStack/Pipeline/Pipeline/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MyStateMachineRoleD59FFEBC"
+            "data": "Pipeline9850B417"
           }
         ],
-        "/WorkflowStack/MyStateMachine/Role/DefaultPolicy/Resource": [
+        "/PipelineStack/Pipeline/Pipeline/Source/vokemwa_Capstone-Project-4-Multi-Account-Automated-and-Governed-Cloud-Platform/WebhookResource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MyStateMachineRoleDefaultPolicyE468EB18"
+            "data": "PipelineSourcevokemwaCapstoneProject4MultiAccountAutomatedandGovernedCloudPlatformWebhookResource0A50DDC8"
           }
         ],
-        "/WorkflowStack/MyStateMachine/Resource": [
+        "/PipelineStack/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Role/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MyStateMachine6C968CA5"
+            "data": "PipelineBuildSynthCdkBuildProjectRole231EEA2A"
           }
         ],
-        "/WorkflowStack/CDKMetadata/Default": [
+        "/PipelineStack/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthCdkBuildProjectRoleDefaultPolicyFB6C941C"
+          }
+        ],
+        "/PipelineStack/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthCdkBuildProject6BEFA8E6"
+          }
+        ],
+        "/PipelineStack/Pipeline/CodeBuildActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineCodeBuildActionRole226DB0CB"
+          }
+        ],
+        "/PipelineStack/Pipeline/CodeBuildActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineCodeBuildActionRoleDefaultPolicy1D62A6FE"
+          }
+        ],
+        "/PipelineStack/Pipeline/UpdatePipeline/SelfMutation/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutationRole57E559E8"
+          }
+        ],
+        "/PipelineStack/Pipeline/UpdatePipeline/SelfMutation/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutationRoleDefaultPolicyA225DA4E"
+          }
+        ],
+        "/PipelineStack/Pipeline/UpdatePipeline/SelfMutation/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutationDAA41400"
+          }
+        ],
+        "/PipelineStack/Pipeline/Assets/FileRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileRole59943A77"
+          }
+        ],
+        "/PipelineStack/Pipeline/Assets/FileRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileRoleDefaultPolicy14DB8755"
+          }
+        ],
+        "/PipelineStack/Pipeline/Assets/FileAsset1/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset185A67CB4"
+          }
+        ],
+        "/PipelineStack/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadata"
           }
         ],
-        "/WorkflowStack/CDKMetadata/Condition": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "CDKMetadataAvailable"
-          }
-        ],
-        "/WorkflowStack/Service-principalMap": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "ServiceprincipalMap"
-          }
-        ],
-        "/WorkflowStack/BootstrapVersion": [
+        "/PipelineStack/BootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "BootstrapVersion"
           }
         ],
-        "/WorkflowStack/CheckBootstrapVersion": [
+        "/PipelineStack/CheckBootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CheckBootstrapVersion"
           }
         ]
       },
-      "displayName": "WorkflowStack"
+      "displayName": "PipelineStack"
     },
     "Tree": {
       "type": "cdk:tree",

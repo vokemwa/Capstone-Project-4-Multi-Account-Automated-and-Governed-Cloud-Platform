@@ -1,0 +1,114 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "PipelineStackDeployWorkflowStackB167CE17.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "PipelineStackDeployWorkflowStackB167CE17.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "PipelineStackDeployWorkflowStackB167CE17": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "PipelineStackDeployWorkflowStackB167CE17.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": true,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/2368d430cc8aaac3fd20b54670d3cc92552512ca8b960e85a096054763c0c39b.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "PipelineStackDeployWorkflowStackB167CE17.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        },
+        "stackName": "Deploy-WorkflowStack"
+      },
+      "dependencies": [
+        "PipelineStackDeployWorkflowStackB167CE17.assets"
+      ],
+      "metadata": {
+        "/PipelineStack/Deploy/WorkflowStack/AppGreeting/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AppGreeting4455FE37"
+          }
+        ],
+        "/PipelineStack/Deploy/WorkflowStack/WorkflowTask/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WorkflowTaskServiceRoleCB3879DC"
+          }
+        ],
+        "/PipelineStack/Deploy/WorkflowStack/WorkflowTask/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WorkflowTaskServiceRoleDefaultPolicy849A8BA1"
+          }
+        ],
+        "/PipelineStack/Deploy/WorkflowStack/WorkflowTask/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WorkflowTask865FF66C"
+          }
+        ],
+        "/PipelineStack/Deploy/WorkflowStack/MyStateMachine/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyStateMachineRoleD59FFEBC"
+          }
+        ],
+        "/PipelineStack/Deploy/WorkflowStack/MyStateMachine/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyStateMachineRoleDefaultPolicyE468EB18"
+          }
+        ],
+        "/PipelineStack/Deploy/WorkflowStack/MyStateMachine/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyStateMachine6C968CA5"
+          }
+        ],
+        "/PipelineStack/Deploy/WorkflowStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/PipelineStack/Deploy/WorkflowStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/PipelineStack/Deploy/WorkflowStack/Service-principalMap": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceprincipalMap"
+          }
+        ],
+        "/PipelineStack/Deploy/WorkflowStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/PipelineStack/Deploy/WorkflowStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "PipelineStack/Deploy/WorkflowStack"
+    }
+  }
+}
